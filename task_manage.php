@@ -1,7 +1,7 @@
 <?php
 include 'db.php';
 
-// Handle status update
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['update_status'])) {
     $task_id = $_POST['task_id'];
     $new_status = $_POST['status'];
@@ -9,14 +9,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['update_status'])) {
     $stmt->execute([$new_status, $task_id]);
 }
 
-// Handle delete
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['delete'])) {
     $task_id = $_POST['task_id'];
     $stmt = $pdo->prepare("DELETE FROM tasks WHERE id = ?");
     $stmt->execute([$task_id]);
 }
 
-// Fetch tasks grouped by status
+
 $tasks = $pdo->query("SELECT t.*, u.name as user_name FROM tasks t JOIN users u ON t.user_id = u.id ORDER BY t.registration_date DESC")->fetchAll(PDO::FETCH_ASSOC);
 
 $grouped_tasks = [
