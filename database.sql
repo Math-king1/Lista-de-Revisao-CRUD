@@ -1,17 +1,17 @@
--- Database creation script for Task Management System
+
 
 CREATE DATABASE IF NOT EXISTS task_management;
 
 USE task_management;
 
--- Users table
+
 CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL UNIQUE
 );
 
--- Tasks table
+
 CREATE TABLE tasks (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
