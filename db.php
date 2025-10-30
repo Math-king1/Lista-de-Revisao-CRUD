@@ -1,13 +1,9 @@
 <?php
 
-
-$host = 'localhost';
-$dbname = 'task_management';
-$username = 'root'; 
-$password = ''; 
+$dbPath = __DIR__ . '/db.sqlite';
 
 try {
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+    $pdo = new PDO("sqlite:$dbPath");
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
     die("Connection failed: " . $e->getMessage());

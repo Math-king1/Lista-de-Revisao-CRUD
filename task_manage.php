@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['delete'])) {
 }
 
 
-$tasks = $pdo->query("SELECT t.*, u.name as user_name FROM tasks t JOIN users u ON t.user_id = u.id ORDER BY t.registration_date DESC")->fetchAll(PDO::FETCH_ASSOC);
+$tasks = $pdo->query("SELECT t.*, u.name as user_name FROM tasks t JOIN users u ON t.user_id = u.id ORDER BY t.id DESC")->fetchAll(PDO::FETCH_ASSOC);
 
 $grouped_tasks = [
     'a fazer' => [],
