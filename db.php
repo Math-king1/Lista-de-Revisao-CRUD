@@ -1,10 +1,10 @@
 <?php
-// Database connection file
+
 
 $host = 'localhost';
 $dbname = 'task_management';
-$username = 'root'; // Adjust as needed
-$password = ''; // Adjust as needed
+$username = 'root'; 
+$password = ''; 
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
