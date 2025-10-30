@@ -1,5 +1,5 @@
 <?php
-// Main menu page
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
