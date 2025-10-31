@@ -46,7 +46,7 @@ $users = $pdo->query("SELECT id, name FROM users")->fetchAll(PDO::FETCH_ASSOC);
 <head>
     <meta charset="UTF-8">
     <title>Cadastrar Tarefa</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
     <h1><?php echo $edit_task ? 'Editar Tarefa' : 'Cadastrar Tarefa'; ?></h1>
