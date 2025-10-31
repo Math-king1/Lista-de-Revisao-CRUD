@@ -36,8 +36,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <button type="submit">Cadastrar</button>
     </form>
     <?php if ($message): ?>
-        <p><?php echo $message; ?></p>
+        <p class="message <?php echo strpos($message, 'Erro') === false ? 'success' : 'error'; ?>"><?php echo $message; ?></p>
     <?php endif; ?>
-    <a href="index.php">Voltar ao Menu</a>
+    <a href="index.php" class="back-link">Voltar ao Menu</a>
 </body>
 </html>

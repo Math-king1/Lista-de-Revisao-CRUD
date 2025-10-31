@@ -22,8 +22,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $stmt = $pdo->prepare("UPDATE tasks SET user_id = ?, description = ?, sector = ?, priority = ? WHERE id = ?");
             if ($stmt->execute([$user_id, $description, $sector, $priority, $edit_task['id']])) {
                 $message = 'Tarefa atualizada com sucesso';
-                header('Location: task_manage.php');
-                exit;
             } else {
                 $message = 'Erro ao atualizar tarefa';
             }
@@ -73,8 +71,8 @@ $users = $pdo->query("SELECT id, name FROM users")->fetchAll(PDO::FETCH_ASSOC);
         <button type="submit"><?php echo $edit_task ? 'Atualizar' : 'Cadastrar'; ?></button>
     </form>
     <?php if ($message): ?>
-        <p><?php echo $message; ?></p>
+        <p class="message <?php echo strpos($message, 'Erro') === false ? 'success' : 'error'; ?>"><?php echo $message; ?></p>
     <?php endif; ?>
-    <a href="index.php">Voltar ao Menu</a>
+    <a href="index.php" class="back-link">Voltar ao Menu</a>
 </body>
 </html>

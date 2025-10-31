@@ -45,7 +45,7 @@ foreach ($tasks as $task) {
                 <div class="task">
                     <p><strong>Descrição:</strong> <?php echo htmlspecialchars($task['description']); ?></p>
                     <p><strong>Setor:</strong> <?php echo htmlspecialchars($task['sector']); ?></p>
-                    <p><strong>Prioridade:</strong> <?php echo htmlspecialchars($task['priority']); ?></p>
+                    <p><strong>Prioridade:</strong> <span class="priority <?php echo $task['priority']; ?>"><?php echo htmlspecialchars(ucfirst($task['priority'])); ?></span></p>
                     <p><strong>Usuário:</strong> <?php echo htmlspecialchars($task['user_name']); ?></p>
                     <form method="POST" style="display:inline;">
                         <input type="hidden" name="task_id" value="<?php echo $task['id']; ?>">
@@ -70,7 +70,7 @@ foreach ($tasks as $task) {
                 <div class="task">
                     <p><strong>Descrição:</strong> <?php echo htmlspecialchars($task['description']); ?></p>
                     <p><strong>Setor:</strong> <?php echo htmlspecialchars($task['sector']); ?></p>
-                    <p><strong>Prioridade:</strong> <?php echo htmlspecialchars($task['priority']); ?></p>
+                    <p><strong>Prioridade:</strong> <span class="priority <?php echo $task['priority']; ?>"><?php echo htmlspecialchars(ucfirst($task['priority'])); ?></span></p>
                     <p><strong>Usuário:</strong> <?php echo htmlspecialchars($task['user_name']); ?></p>
                     <form method="POST" style="display:inline;">
                         <input type="hidden" name="task_id" value="<?php echo $task['id']; ?>">
@@ -95,7 +95,7 @@ foreach ($tasks as $task) {
                 <div class="task">
                     <p><strong>Descrição:</strong> <?php echo htmlspecialchars($task['description']); ?></p>
                     <p><strong>Setor:</strong> <?php echo htmlspecialchars($task['sector']); ?></p>
-                    <p><strong>Prioridade:</strong> <?php echo htmlspecialchars($task['priority']); ?></p>
+                    <p><strong>Prioridade:</strong> <span class="priority <?php echo $task['priority']; ?>"><?php echo htmlspecialchars(ucfirst($task['priority'])); ?></span></p>
                     <p><strong>Usuário:</strong> <?php echo htmlspecialchars($task['user_name']); ?></p>
                     <form method="POST" style="display:inline;">
                         <input type="hidden" name="task_id" value="<?php echo $task['id']; ?>">
@@ -115,6 +115,6 @@ foreach ($tasks as $task) {
             <?php endforeach; ?>
         </div>
     </div>
-    <a href="index.php">Voltar ao Menu</a>
+    <a href="index.php" class="back-link">Voltar ao Menu</a>
 </body>
 </html>
