@@ -34,7 +34,7 @@ foreach ($tasks as $task) {
 <head>
     <meta charset="UTF-8">
     <title>Gerenciar Tarefas</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Gerenciar Tarefas</h1>

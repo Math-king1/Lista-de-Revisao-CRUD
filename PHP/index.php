@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Gerenciamento de Tarefas</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Gerenciamento de Tarefas</h1>
