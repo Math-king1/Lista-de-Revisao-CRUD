@@ -2,9 +2,9 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 20px;
-    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #3a7bd5 100%);
+    background: linear-gradient(135deg, #0d1b2a 0%, #1b263b 50%, #415a77 100%);
     min-height: 100vh;
-    color: #333;
+    color: #e0e1dd;
     line-height: 1.6;
 }
 
@@ -21,10 +21,10 @@ nav {
     text-align: center;
     margin-bottom: 30px;
     backdrop-filter: blur(10px);
-    background: rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.15);
     padding: 15px;
     border-radius: 15px;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
 }
 
 nav ul {
@@ -72,15 +72,15 @@ nav ul li a:hover {
 }
 
 form {
-    background: rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.15);
     backdrop-filter: blur(15px);
     padding: 35px;
     border-radius: 15px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
     max-width: 500px;
     margin: 0 auto;
     animation: fadeIn 0.6s ease-in;
-    border: 1px solid rgba(255,255,255,0.2);
+    border: 1px solid rgba(255,255,255,0.25);
 }
 
 @keyframes fadeIn {
@@ -171,13 +171,13 @@ button:hover {
 
 .column {
     flex: 1;
-    background: rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.15);
     backdrop-filter: blur(15px);
     padding: 25px;
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
     min-height: 450px;
-    border: 1px solid rgba(255,255,255,0.2);
+    border: 1px solid rgba(255,255,255,0.25);
     animation: slideIn 0.6s ease-out;
 }
 
